@@ -4,7 +4,7 @@
     width: 100px;
     height: 100px;
     border: 1px solid red;
-    transition: 3s;
+    transition: 3s linear;
 }
 
 .ex-1-square:hover {
@@ -17,7 +17,7 @@
     width: 100px;
     height: 100px;
     background: red;
-    transition: width 3s;
+    transition: width 3s linear
 }
 
 .ex-2-square:active {
@@ -30,7 +30,7 @@
     width: 100px;
     height: 100px;
     background: red;
-    transition: 3s;
+    transition: 3s linear;
 }
 
 .ex-3-square:hover {
@@ -43,18 +43,11 @@
     width: 100px;
     height: 100px;
     background: red;
-    animation: disappear 5s 3;
+    transition: filter 3s linear;
 }
 
-@keyframes disappear {
-    0% {
-        width: 100px;
-        height: 100px;
-    }
-    100% {
-        width: 0;
-        height: 0;
-    }
+.ex-4-square:hover {
+    filter: opacity(0);
 }
 
 /* esercizio 5 */
@@ -64,7 +57,7 @@
     width: 60px;
     height: 60px;
     background: red;
-    transition: 3s;
+    transition: 3s linear;
 }
 
 .ex-5-square:hover {
@@ -86,22 +79,12 @@
 /* esercizio 7 */
 
 .ex-7-img {
-    position: relative;
-    animation: fly 10s infinite;
-    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    width: 500px;
+    transition: 5s linear;
 }
 
-@keyframes fly {
-    from {
-        top: 0px;
-        left: 500px;
-        filter: saturate(5) blur(0);
-    }
-    to {
-        top: 600px;
-        left: 0px;
-        filter: saturate(2) blur(15px);
-    }
+.ex-7-img:hover {
+    filter: saturate(5) blur(15px);
 }
 
 /* esercizio 8 */
@@ -123,23 +106,11 @@
 
 .ex-10-icon {
     font-size: 60px;
-    animation: spin 3s infinite;
+    animation: spin 3s linear infinite;
 }
 
 @keyframes spin {
     0% {
-        transform: rotate(0);
-    }
-    25% {
-        transform: rotate(0.25turn);
-    }
-    50% {
-        transform: rotate(0.5turn);
-    }
-    75% {
-        transform: rotate(0.75turn);
-    }
-    100% {
         transform: rotate(1turn);
     }
 }
@@ -151,18 +122,12 @@
 }
 
 .ex-11-icon:hover {
-    animation: spin2 3s;
+    animation: spin2 3s linear;
 }
 
 @keyframes spin2 {
     0% {
         transform: rotate(0);
-    }
-    25% {
-        transform: rotate(0.25turn);
-    }
-    50% {
-        transform: rotate(0.5turn);
     }
     75% {
         transform: rotate(0.75turn);
@@ -204,11 +169,11 @@
 }
 
 .ex-12-top-white {
-    animation: movedx 3s infinite;
+    animation: movedx 3s linear infinite;
 }
 
 .ex-12-bottom-white {
-    animation: movesx 3s infinite;
+    animation: movesx 3s linear infinite;
 }
 
 @keyframes movedx {
@@ -268,7 +233,7 @@
 }
 
 .ex-13-top-white {
-    animation: circles 3s infinite;
+    animation: circles 3s linear infinite;
 }
 
 @keyframes circles {
@@ -299,7 +264,7 @@
 }
 
 .ex-13-bottom-white {
-    animation: circles2 3s infinite;
+    animation: circles2 3s linear infinite;
 }
 
 @keyframes circles2 {
